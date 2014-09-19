@@ -162,8 +162,7 @@ BOOL ImageDataHasPNGPreffix(NSData *data)
 #pragma mark ImageCache
 
 
-- (void)storeImage:(UIImage *)image recalculateFromImage:(BOOL)recalculate imageData:(NSData *)imageData forKey:(NSString *)key toDisk:(BOOL)toDisk withMetadata:(NSDictionary *)metadata
-{
+- (void)storeImage:(UIImage *)image recalculateFromImage:(BOOL)recalculate imageData:(NSData *)imageData forKey:(NSString *)key toDisk:(BOOL)toDisk withMetadata:(NSDictionary *)metadata {
     if (!image || !key)
     {
         return;
