@@ -161,7 +161,7 @@
                                     
                                     if ((!image || options & SDWebImageRefreshCached || options & SDWebImageRefreshIfModifiedSince) && (![self.delegate respondsToSelector:@selector(imageManager:shouldDownloadImageForURL:)] || [self.delegate imageManager:self shouldDownloadImageForURL:url]))
                                     {
-                                        if (image && options & SDWebImageRefreshCached)
+                                        if (image && ((options & SDWebImageRefreshCached) || (options & SDWebImageRefreshIfModifiedSince)))
                                         {
                                             dispatch_main_sync_safe(^
                                                                     {
