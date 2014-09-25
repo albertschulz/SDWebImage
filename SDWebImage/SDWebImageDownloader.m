@@ -135,33 +135,6 @@ static NSString *const kCompletedCallbackKey = @"completed";
             }
         }
         
-        //        operation = [SDWebImageDownloaderOperation.alloc initWithRequest:request options:options progress:^(NSUInteger receivedSize, long long expectedSize)
-        //        {
-        //            if (!wself) return;
-        //            SDWebImageDownloader *sself = wself;
-        //            NSArray *callbacksForURL = [sself callbacksForURL:url];
-        //            for (NSDictionary *callbacks in callbacksForURL)
-        //            {
-        //                SDWebImageDownloaderProgressBlock callback = callbacks[kProgressCallbackKey];
-        //                if (callback) callback(receivedSize, expectedSize);
-        //            }
-        //        }
-        //        completed:^(UIImage *image, NSData *data, NSDictionary *responseHTTPHeaderFields, NSError *error, BOOL finished)
-        //        {
-        //            if (!wself) return;
-        //            SDWebImageDownloader *sself = wself;
-        //            NSArray *callbacksForURL = [sself callbacksForURL:url];
-        //            if (finished)
-        //            {
-        //                [sself removeCallbacksForURL:url];
-        //            }
-        //            for (NSDictionary *callbacks in callbacksForURL)
-        //            {
-        //                SDWebImageDownloaderCompletedBlock callback = callbacks[kCompletedCallbackKey];
-        //                if (callback) callback(image, data, responseHTTPHeaderFields, error, finished);
-        //            }
-        //=======
-        
         operation = [[SDWebImageDownloaderOperation alloc] initWithRequest:request
                                                                    options:options
                                                                   progress:^(NSInteger receivedSize, NSInteger expectedSize) {
